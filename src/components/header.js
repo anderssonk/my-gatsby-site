@@ -6,6 +6,9 @@ const Header = () => {
     <div>
       <h1>Portfolio</h1>
       <p>
+        <Link to='/'>Home</Link>
+      </p>
+      <p>
         <Link to='/about'>About</Link>
       </p>
       <p>
