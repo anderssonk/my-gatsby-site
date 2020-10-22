@@ -5,8 +5,8 @@ const ContactPage = () => {
     <div>
       <h1>Contact</h1>
       <p>
-        The best way to contact me is by email, kristina-andersson@outlook.com,
-        or by giving me a call! My number is +46(0)76 576 68 02
+        The best way to reach me is by contacting me on{' '}
+        <a href='https://www.linkedin.com/in/kristina-andersson/'>LinkedIn</a>
       </p>
     </div>
   )

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'gatsby'
 
 const AboutPage = () => {
   return (
@@ -8,6 +9,9 @@ const AboutPage = () => {
         I am currently pursuing my Master of Science in Computer Science and
         Engineering / Interactive Media Technology at KTH Royal Institute of
         Technology, Stockholm.
+      </p>
+      <p>
+        Want to work with me? <Link to='/contact'>Reach out.</Link>
       </p>
     </div>
   )
