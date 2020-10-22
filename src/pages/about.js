@@ -1,10 +1,12 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import Header from '../components/header'
 import Footer from '../components/footer'
+import { Link } from 'gatsby'
 
 const AboutPage = () => {
   return (
     <div>
+      <Header />
       <h1>About me</h1>
       <p>
         I am currently pursuing my Master of Science in Computer Science and
