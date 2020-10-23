@@ -20,18 +20,17 @@ const BlogPage = () => {
     }
   `)
 
-  const posts = data.allMarkdownRemark.edges
-  const listItems = posts.map(post => (
-    <li key={post.node.frontmatter.title}>
-      <h1>{post.node.frontmatter.title}</h1>
-      <p>{post.node.frontmatter.date}</p>
+  const blogItems = data.allMarkdownRemark.edges.map(edge => (
+    <li>
+      <h1>{edge.node.frontmatter.title}</h1>
+      <p>{edge.node.frontmatter.date}</p>
     </li>
   ))
 
   return (
     <Layout>
       <h1>Blog</h1>
-      <ol>{listItems}</ol>
+      <ol>{blogItems}</ol>
     </Layout>
   )
 }
