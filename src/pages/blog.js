@@ -21,7 +21,7 @@ const BlogPage = () => {
   `)
 
   const blogItems = data.allMarkdownRemark.edges.map(edge => (
-    <li>
+    <li key={edge.node.frontmatter.title}>
       <h1>{edge.node.frontmatter.title}</h1>
       <p>{edge.node.frontmatter.date}</p>
     </li>
