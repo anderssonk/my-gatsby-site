@@ -4,25 +4,18 @@ import Layout from '../components/layout'
 
 export const query = graphql`
   query($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      frontmatter {
-        title
-        date
-      }
-      html
+    contentfulBlogPost(slug: { eq: $slug }) {
+      title
+      publishedDate(formatString: "MMMM Do, YYYY")
     }
   }
 `
-// must do outside component as we can't get context from useStaticQuery
 
 const Blog = props => {
   return (
     <Layout>
-      <h1>{props.data.markdownRemark.frontmatter.title}</h1>
-      <p>{props.data.markdownRemark.frontmatter.date}</p>
-      <div
-        dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }}
-      ></div>
+      <h1>{props.data.contentfulBlogPost.title}</h1>
+      <p>{props.data.contentfulBlogPost.publishedDate}</p>
     </Layout>
   )
 }
