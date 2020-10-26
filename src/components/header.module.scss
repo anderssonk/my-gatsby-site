@@ -1,9 +1,13 @@
+@import '../styles/variables.scss';
+
 .header {
   padding: 1rem 0 3rem;
+  display: flex;
+  justify-content: space-between;
 }
 
 .title {
-  color: #000;
+  color: $dark-grey;
   font-size: 3rem;
   text-decoration: none;
 }
@@ -15,16 +19,16 @@
 }
 
 .nav-item {
-  color: #999;
+  color: $medium-light-grey;
   font-size: 0.9rem;
   margin-right: 1.3rem;
   text-decoration: none;
 }
 
 .nav-item:hover {
-  color: #666;
+  color: $medium-grey;
 }
 
 .active-nav-item {
-  color: #333;
+  color: $dark-grey;
 }
