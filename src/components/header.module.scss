@@ -1,34 +1,97 @@
 @import '../styles/variables.scss';
+$duration: 0.2s;
+$distance: 1rem;
+$easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
 .header {
-  padding: 1rem 0 3rem;
+  padding: 0 2.2rem 3rem 2.2rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .title {
   color: $dark-grey;
-  font-size: 3rem;
+  font-size: 1.5rem;
   text-decoration: none;
+}
+
+.nav-container {
+  display: flex;
+  align-items: baseline;
 }
 
 .nav-list {
   display: flex;
   list-style-type: none;
-  margin: 0;
+  margin: 1rem;
 }
 
 .nav-item {
-  color: $medium-light-grey;
-  font-size: 0.9rem;
-  margin-right: 1.3rem;
+  color: $dark-grey;
+  font-size: 0.7rem;
+  margin: 0.6rem;
+  text-transform: uppercase;
+  font-weight: 600;
   text-decoration: none;
-}
+  padding: 0.6rem 0.1rem;
+  position: relative;
 
-.nav-item:hover {
-  color: $medium-grey;
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    right: 0;
+    height: 0.15rem;
+    background-color: $dark-grey;
+  }
+  &:before {
+    opacity: 0;
+    transform: translateY(-$distance);
+    transition: transform 0s $easeOutBack, opacity 0s;
+  }
+  &:after {
+    opacity: 0;
+    // transform: translateY($distance/2);
+    transition: transform $duration $easeOutBack, opacity $duration;
+  }
+  &:hover,
+  &:focus {
+    &:before,
+    &:after,
+    .active-nav-item {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    &:before {
+      transition: transform $duration $easeOutBack, opacity $duration;
+    }
+    &:after {
+      transition: transform 0s $duration $easeOutBack, opacity 0s $duration;
+    }
+  }
 }
 
 .active-nav-item {
   color: $dark-grey;
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    right: 0;
+    height: 0.15rem;
+    transform: translateY(0);
+    background-color: $dark-grey;
+    opacity: 1;
+  }
+}
+
+svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
 }

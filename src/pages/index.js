@@ -12,7 +12,7 @@ const IndexPage = () => {
       <p>
         Need a developer?{' '}
         <Link to='/contact' className='btn primary'>
-          Contact me.
+          Contact me
         </Link>
       </p>
     </Layout>

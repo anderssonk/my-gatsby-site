@@ -9,38 +9,25 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: $background-color;
-  background-image: -webkit-linear-gradient(
-    272deg,
-    $light-grey 145px,
-    $background-color 146px
-  );
+  background-color: $light-grey;
 }
 
 .btn {
-  color: #000000;
+  color: $dark-grey;
   text-decoration: none;
   padding: 0.3rem;
   border-radius: 0.3rem;
-  // border: 1px solid black;
 }
 
 .primary {
-  color: $pink;
-  border: 1px solid $pink;
-  font-size: $small;
-
+  background-color: $dark-grey;
+  color: $light-grey;
   &:hover {
-    color: $pink-hover;
-    border-color: $pink-hover;
   }
 }
 
 .secondary {
-  color: $pink;
-
   &:hover {
-    color: $pink-hover;
   }
 }
 
@@ -82,6 +69,7 @@ h1 {
   font-size: 2em;
   margin: 0.67em 0;
 }
+
 mark {
   background-color: #ffe45e;
 }
@@ -141,9 +129,9 @@ img {
 }
 
 hgroup {
-  margin: 0 0 1.45rem 0; 
-  padding: 0; 
-  color: inherit; 
+  margin: 0 0 1.45rem 0;
+  padding: 0;
+  color: inherit;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
@@ -175,7 +163,8 @@ h6 {
   font-size: 0.78405rem;
 }
 
-ul, ol  {
+ul,
+ol {
   margin: 0 0 1.45rem 1.45rem;
   padding: 0;
   list-style-position: outside;
@@ -187,7 +176,8 @@ p {
   padding: 0;
 }
 
-b, strong {
+b,
+strong {
   font-weight: bold;
 }
 
